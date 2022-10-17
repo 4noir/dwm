@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const int startwithgaps      = 1;
@@ -100,8 +99,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ControlMask|ShiftMask, XK_e,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_e,      quit,           {1} }, 
+	{ MODKEY|ShiftMask,             XK_e,      quitprompt,     {0} },
 };
 
 /* button definitions */
