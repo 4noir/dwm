@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 /* appearance */
+#define ROFI_DPI 192
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const int startwithgaps      = 1;
 static const unsigned int gappx     = 10;
@@ -59,7 +60,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "rofi", "-show", "run" };
+static const char *dmenucmd[] = { "rofi", "-dpi", "192","-show", "run"};
 static const char *termcmd[]  = { "alacritty", NULL };
 
 static const Key keys[] = {
