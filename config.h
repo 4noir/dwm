@@ -64,8 +64,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "run" };
 static const char *termcmd[]  = { "alacritty", NULL };
 
-static const char *brupcmd[] = { "sudo", "light", "-A", "10", NULL };
-static const char *brdowncmd[] = { "sudo", "light", "-U", "10", NULL };
+static const char *brupcmd[] = { "light", "-A", "10", NULL };
+static const char *brdowncmd[] = { "light", "-U", "10", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
