@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -61,7 +61,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "run" };
 static const char *termcmd[]  = { "alacritty", NULL };
 
-static const char *brup[] = { "sudo", "light", "-A", "10", NULL }
+static const char *brupcmd[] = { "sudo", "light", "-A", "10", NULL }
 static const char *brdowncmd[] = { "sudo", "light", "-U", "10", NULL }
 
 static const Key keys[] = {
