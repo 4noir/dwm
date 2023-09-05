@@ -61,6 +61,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "run" };
 static const char *termcmd[]  = { "alacritty", NULL };
 
+static const char *brup[] = { "sudo", "light", "-A", "10", NULL }
+static const char *brdowncmd[] = { "sudo", "light", "-U", "10", NULL }
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -86,6 +89,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ 0,             XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
+	{ 0,             XF86XK_MonBrightnessUp,   spawn,          {.v = brupcmd} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
